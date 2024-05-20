@@ -1,0 +1,127 @@
+/* estilos.css */
+body {
+    background-image: url(fondo.jpeg);
+    margin: 0;
+
+}
+
+header {
+    display: flex;
+    height:auto;
+    background-color: forestgreen;
+    align-items: flex-end;
+    padding: 10px;
+    width: 150%;
+}
+
+.logo img {
+    max-width: 30px;
+    margin-right: 12px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.nombre-empresa{
+    text-decoration: none;
+    color: blueviolet;
+}
+
+nav {
+    flex-grow: 2;
+    margin-left:10px;
+    color: white;
+
+}
+
+.nav-link {
+    margin-right: 5px;
+    margin-top:10px;
+    font-size: 13px; 
+    align-items: flex-end;
+}
+
+.nav-link-espacioU {
+    margin-left: 920px;
+    margin-top: 20px;
+    font-size: 9px;
+} 
+
+.nav-link-espacioD {
+    margin-top: 30px;
+    font-size: 9px;
+}
+nav a:hover {
+    color: white;
+    align-items: flex-end;
+}
+.img-pipa {
+    max-width: 300px !important;
+    max-height: 300px !important;
+  }
+
+  
+.container{
+    display: flex;
+    justify-content: center;
+    height: 6vh;
+    margin-top: 2px;
+    border-color: black;
+
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    grid-gap: 50;
+    margin-right: 60px;
+
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-gap: 20px;
+    }
+    .logo img {
+        max-width: 20px;
+        margin-right: 8px;
+    }
+    .nav-link-espacioU {
+        margin-left: 20px;
+    }
+}
+
+/* Estilos para dispositivos de pantalla mediana a grande */
+@media (min-width: 769px) {
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-gap: 30px;
+    }
+    .logo img {
+        max-width: 30px;
+        margin-right: 12px;
+    }
+    .nav-link-espacioU {
+        margin-left: 920px;
+    }
+}
+/* Estilos para dispositivos de pantalla grande */
+@media (min-width: 1200px) {
+    .grid-container {
+        grid-template-columns: repeat(4, minmax(200px, 1fr)); /* Ejemplo de 4 columnas */
+        grid-gap: 40px;
+    }
+    .logo img {
+        max-width: 40px;
+        margin-right: 16px;
+    }
+    .nav-link-espacioU {
+        margin-left: 40px;
+    }
+}
